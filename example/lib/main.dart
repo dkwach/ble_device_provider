@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 
-
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -13,27 +14,24 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: MyHomePage(),
+      home: const MyHomePage(),
     );
   }
 }
 
 class MyHomePage extends StatefulWidget {
-  MyHomePage({Key? key}) : super(key: key);
+  const MyHomePage({super.key});
 
   @override
   _MyHomePageState createState() => _MyHomePageState();
 }
 
 class _MyHomePageState extends State<MyHomePage> {
- 
   @override
   void initState() {
     super.initState();
   }
 
-  
-  
   @override
   Widget build(BuildContext context) {
     const Widget content = TextField();
@@ -43,7 +41,7 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Scaffold(
             appBar: PreferredSize(
               preferredSize: const Size.fromHeight(100),
-              child: AppBar(title: Text("Universal chess board example")),
+              child: AppBar(title: const Text("Universal chess board example")),
             ),
             body: content));
   }
